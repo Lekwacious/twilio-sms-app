@@ -25,14 +25,21 @@ SECRET_KEY = 'django-insecure-j&%l4_f$&g#)b&ss1zvqm0m=%om08=-%dp&ilc@s5mzm)9gq69
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
+
 
 
 # Application definition
 TWILLIO_ACCOUNT_SID = 'AC208499d7e9ebc1d4852bf6171c5ad362'
-TWILLIO_AUTH_TOKEN = 'bf8d23999023c592835f1cca192305c7'
+TWILLIO_AUTH_TOKEN = '05365043907d0c0872952022504b1d60'
 TWILIO_NUMBER = '+19452062301'
 SMS_BROADCAST_TO_NUMBERS = [ 
+    "+2347033621105",
+    "+2347033621105",
+    "+2347033621105",
+    "+2347033621105",
+    "+2347033621105",
     "+2347033621105", # use the format +19735551234
   
 ]
@@ -46,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'phonenumber_field',
         'rest_framework'
 ]
 
