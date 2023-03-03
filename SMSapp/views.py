@@ -18,7 +18,7 @@ q = Queue(connection=Redis())
 
 
 def send_sms(from_, to, body):
-    client = Client(settings.TWILLIO_ACCOUNT_SID, settings.TWILLIO_AUTH_TOKEN)
+    client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
     client.messages.create(from_=from_, to=to, body=body)
 
 def broadcast_sms(request):
