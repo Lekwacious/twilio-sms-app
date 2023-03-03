@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,13 +28,14 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
-
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Application definition
-TWILLIO_ACCOUNT_SID = 'add your account SID here'
-TWILLIO_AUTH_TOKEN = 'add your auth token here'
-TWILIO_NUMBER = '+19452062301'
+TWILIO_ACCOUNT_SID =  env(MY_ACCOUNT_SID)
+TWILIO_AUTH_TOKEN =  env(TWILIO_AUTH_TOKEN)
+TWILIO_NUMBER =  env(MY_TWILIO_NUMBER)
 SMS_BROADCAST_TO_NUMBERS = [ 
     "+2347033621105",
     "+2347033621105",
